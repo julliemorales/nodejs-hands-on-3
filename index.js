@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
 
-const articleRouter = require("./src/routes/article.routes");
+app.set("view engine", "ejs");
+
+const articleRouter = require("./routes/article.routes");
 
 app.get("/", function (req, res) {
-  res.status(200).send("Nothing to see here.");
+  res.status(200).render("pages/index");
 });
 
 app.use("/articles", articleRouter);

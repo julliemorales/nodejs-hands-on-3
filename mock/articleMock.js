@@ -5,6 +5,7 @@ const articles = [
     order: 1,
     completed: true,
     author: "Diego Laura",
+    imageSrc: "https://dummyimage.com/400x300/000/fff",
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ const articles = [
     order: 2,
     completed: true,
     author: "Laong-Laan",
+    imageSrc: "https://dummyimage.com/400x300/000/fff",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ const articles = [
     order: 3,
     completed: true,
     author: "Agap-ito Bagumbayan",
+    imageSrc: "https://dummyimage.com/400x300/000/fff",
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ const articles = [
     order: 4,
     completed: false,
     author: "Taga-Ilog",
+    imageSrc: "https://dummyimage.com/400x300/000/fff",
   },
   {
     id: 5,
@@ -33,6 +37,7 @@ const articles = [
     order: 5,
     completed: false,
     author: "Dimas-Ilaw",
+    imageSrc: "https://dummyimage.com/400x300/000/fff",
   },
 ];
 

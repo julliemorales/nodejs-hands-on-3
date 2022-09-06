@@ -12,17 +12,19 @@
     <section class="container mt-5">
       <div class="row">
         <div class="col">
-          <div>
+          <div class="mt-5">
             <div>
               <img src="<%= article.imageSrc %>" alt="" />
             </div>
-            <div class="display-6 mt-3">
+            <div class="display-6">
               <p>"<%= article.title %>"</p>
             </div>
             <div>
               <p>
                 Author:
-                <span class="fw-bold fst-italic"><%= article.author %></span>
+                <span class="fw-bold fst-italic fs-5"
+                  ><%= article.author %></span
+                >
               </p>
             </div>
             <div>
@@ -34,20 +36,29 @@
               </p>
             </div>
             <div>
-              <p><%= article.description %></p>
-            </div>
-            <div>
-              <p><%= article.content %></p>
-            </div>
-            <div>
               <p>
-                Completed:
-                <span class="fw-bold">
-                  <% if (article.completed === true) { %> Yes <% } else { %> No
-                  <% } %></span
+                Short Description:
+                <span class="fst-italic fw-bold"
+                  >"<%= article.description %>"</span
                 >
               </p>
             </div>
+            <div>
+              <p>Content:</p>
+              <p class="fst-italic fw-bold"><%= article.content %></p>
+            </div>
+            <div>
+              <p>
+                Completed: <% if (article.completion === "on") { %>
+                <span class="fw-bold">Yes</span>
+                <% } else { %>
+                <span class="fw-bold">No</span>
+                <% } %>
+              </p>
+            </div>
+            <a class="btn btn-outline-primary" href="/gallery"
+              >Back to Gallery</a
+            >
           </div>
         </div>
       </div>

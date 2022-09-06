@@ -18,7 +18,11 @@
             <div class="display-4">
               <p>Update the Article</p>
             </div>
-            <form class="mt-3" action="/gallery/update" method="PUT">
+            <form
+              class="mt-3"
+              action="/gallery/<%= article.id %>/update?_method=PUT"
+              method="POST"
+            >
               <div class="form-group">
                 <label for="inputId">ID:</label>
                 <input
@@ -87,9 +91,9 @@
                   >
                 </div>
                 <div class="form-check mt-3">
-                  <% if (article.completed === true) { %>
+                  <% if (article.completed === "on") { %>
                   <input
-                    name="completion"
+                    name="completed"
                     type="checkbox"
                     class="form-check-input"
                     id="completion"
@@ -97,7 +101,7 @@
                   />
                   <% } else { %>
                   <input
-                    name="completion"
+                    name="completed"
                     type="checkbox"
                     class="form-check-input"
                     id="completion"
@@ -118,6 +122,8 @@
               </div>
 
               <button
+                name="submitButton"
+                value="<% article.id %>"
                 href="/gallery/<%= article.id %>"
                 type="submit"
                 class="btn btn-primary mt-3"

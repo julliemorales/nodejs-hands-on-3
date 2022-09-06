@@ -13,8 +13,8 @@
       <div class="row">
         <div class="col">
           <div>
-            <div>
-              <img src="<%= article.imageSrc %>" alt="" />
+            <div class="display-4 pb-3">
+              <p>Updated Article:</p>
             </div>
             <div class="display-6 mt-3">
               <p>"<%= article.title %>"</p>
@@ -43,8 +43,8 @@
               <p>
                 Completed:
                 <span class="fw-bold">
-                  <% if (article.completed === true) { %> Yes <% } else { %> No
-                  <% } %></span
+                  <% if (article.completed === "on" || article.completed ===
+                  true) { %> Yes <% } else { %> No <% } %></span
                 >
               </p>
             </div>

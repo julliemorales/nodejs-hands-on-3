@@ -67,7 +67,7 @@
                         type="button"
                         class="btn btn-danger"
                         data-bs-toggle="modal"
-                        data-bs-target="#deleteModal"
+                        data-bs-target="#deleteModal<%= article.id %>"
                       >
                         Delete
                       </button>
@@ -78,7 +78,7 @@
                 <!-- Modal -->
                 <div
                   class="modal fade"
-                  id="deleteModal"
+                  id="deleteModal<%= article.id %>"
                   tabindex="-1"
                   role="dialog"
                   aria-labelledby="deleteModalLabel"
@@ -100,7 +100,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        Deleting the article "<%= article.title %>"?
+                        Proceed in deleting the article "<%= article.title %>"?
                       </div>
                       <div class="modal-footer">
                         <button
@@ -110,12 +110,14 @@
                         >
                           Close
                         </button>
-                        <a
-                          href="/gallery/<%= article.id %>/delete"
-                          class="btn btn-primary"
+                        <form
+                          action="/gallery/<%= article.id %>/delete?_method=DELETE"
+                          method="POST"
                         >
-                          Proceed
-                        </a>
+                          <button type="submit" class="btn btn-primary">
+                            Proceed
+                          </button>
+                        </form>
                       </div>
                     </div>
                   </div>
